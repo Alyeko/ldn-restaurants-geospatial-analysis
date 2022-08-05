@@ -1,6 +1,7 @@
 # ldn-restaurants-geospatial-analysis
 Various geospatial analysis and visualization of london restaurant data
-![Screenshot](screenshot1.png)
+
+![Screenshot](/imgs/screenshot1.png)
 
 ### Data Sources
  File name                                 |Data type                        |Source                              |Component
