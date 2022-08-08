@@ -1,8 +1,30 @@
 # ldn-restaurants-geospatial-analysis
-Various geospatial analysis and visualization of london restaurant data
+For london restaurant data obtained from the wyre api, cluster and buffer analyses, calculation of distances between points of interest and interactive folium maps were made in order to understand the data better
 
-![Screenshot](/imgs/screenshot1.PNG)
+### Analyses
+#### 1. Cluster Anlysis
+The elbow method was used to find the appropriate value of k to be used for clustering.
 
+The `MiniBatchKMeans` function in sklearn was used to make the clusters and this was done to further group the restaurant points in the event that further analysis needed to be done in smaller areas.
+<img src="imgs/screenshot2.PNG" width="650" height="500" />
+
+#### 2. Buffer Analysis
+Name of a restaurant is taken as input from the user and buffers(depending values of interest to the user) are drawn(with different colours) around a restaurant of interest, to see all other restaurants which fall within the preferred region and all others which fall outside. 
+<img src="imgs/screenshot1.PNG" width="650" height="500" />
+
+### Functions Written
+Function name          |Arguments                   |Description                     |Ouptut
+-----------------------|----------------------------|------------------------------- |-------------------
+`create_linestring_gdf`|gdframe, epsg=27700	    |Creates a line gdf* from a point gdf      |Line gdf              
+`calc_dist_bw_pts_in`    |gdframe, epsg               |Converts points to a projected epsg(whose code the user must enter) before calculation of distances between all points in the gdframe                |Geodataframe with a new `distances` column
+`add_markers_to_the_map` |gdframe, epsg=27700         |Converts points to epsg 27700 if chosen by user and adds point markers in gdf to folium map                |Folium map object
+`add_lines_to`           |map_object, line_gdf, color |Plots lines in a line gdf on a folium map object  |Folium map object
+
+
+### Visualizations
+Visualizations were made with the help of `folium`, `geopandas` and `matplotlib` modules
+
+For `foliup` maps, popups are added for interactivity
 ### Data Sources
  File name                                 |Data type                        |Source                              |Component
 ------------------------------------------ |---------------------------------|----------------------------------- |--------------
@@ -17,3 +39,6 @@ London_tube_lines.csv                      | Non-spatial                     |[d
 	
 ### To-do:
 Add error handling functionality to functions
+
+### *
+*gdf- geodataframe
