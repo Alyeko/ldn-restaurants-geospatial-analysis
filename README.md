@@ -22,9 +22,17 @@ Function name          |Arguments                   |Description                
 
 
 ### Visualizations
-Visualizations were made with the help of `folium`, `geopandas` and `matplotlib` modules
+Visualizations were made with the help of `folium`, `geopandas` and `matplotlib` modules. For `foliup` maps, popups and tooltips are added for interactivity
+#### Visualizations made
+- Restuarants of interest and buffer regions [`shown blue markers`]
+- Convex hull around restaurants of interest [`shown blue polygon`]
+- Distances between restaurants within the buffer regions and their respective tooltips [`shown by black lines`]
+- London tube stations within buffer regions and their respective tooltips [`shown by red points`]
+- London tube lines within buffer regions and their respective tooltips [`shown by red lines`]
 
-For `foliup` maps, popups are added for interactivity
+
+<img src="imgs/screenshot3.PNG" width="650" height="500" />
+
 ### Data Sources
  File name                                 |Data type                        |Source                              |Component
 ------------------------------------------ |---------------------------------|----------------------------------- |--------------
