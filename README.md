@@ -1,5 +1,5 @@
 # ldn-restaurants-geospatial-analysis
-For london restaurant data obtained from the wyre api, cluster and buffer analyses, calculation of distances between points of interest and interactive folium maps were made in order to understand the data better
+For london restaurant data obtained from the [wyre data api](https://wyre-data.p.rapidapi.com/restaurants/town/london), cluster and buffer analyses, calculation of distances between points of interest and interactive folium maps were made in order to understand the data better
 
 ### Analyses
 #### 1. Cluster Anlysis
