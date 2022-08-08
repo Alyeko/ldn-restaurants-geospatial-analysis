@@ -48,6 +48,7 @@ London_tube_lines.csv                      | Non-spatial                     |[d
 	
 ### To-do:
 Add error handling functionality to functions
+Feature groups for imrpoved legend on folium plot
 
 ### *
 *gdf- geodataframe
